@@ -1,484 +1,528 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <meta charset="UTF-8">
-    <meta name="author" content="solrac">
-    <meta name="description" content="My Projects TW 2">
-    <meta name="keywords" content="HTML, CSS, JS, Bootstrap">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Profile</title>
-        <link rel="icon" type="image/x-icon" href="./images/HURRICANE.png">
-        <link href="./css/bootstrap.min.css" rel="stylesheet">
-        <link href="./icons/bootstrap-icons.css" rel="stylesheet">
-                       
-      <style>
-      
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="author" content="solrac">
+    <meta name="description" content="My Projects TW 2">
+    <meta name="keywords" content="HTML, CSS, JS, Bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>My Profile</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/HURRICANE.png">
+    <!-- Bootstrap CSS offline -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons offline -->
+    <link href="./icons/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS online -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <!-- Bootstrap Icons online -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> -->
+    <!-- My CSS -->
+   
+      <style>
+    .myclass-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 10px;
+      }
+
+      
 /* =======================================================
-   ESTILO MINIMAL-FUTURISTIC - TRON
-   ======================================================= */
+   ESTILO MINIMAL-FUTURISTIC - TRON
+   ======================================================= */
 
 /* ---- Fuente futurista (fallback si no carga) ---- */
 body {
-    background: #0b0f19;
-    color: #e5eaff;
-    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    background: #0b0f19;
+    color: #e5eaff;
+    font-family: 'Orbitron', 'Segoe UI', sans-serif;
 }
 
 /* ---- Neón azul global ---- */
 :root {
-    --neon: #00e5ff;
-    --neon-soft: rgba(0, 229, 255, 0.35);
-    --dark-bg: #0b0f19;
+    --neon: #00e5ff;
+    --neon-soft: rgba(0, 229, 255, 0.35);
+    --dark-bg: #0b0f19;
 }
 
 /* ---- Efecto neón ---- */
 .neon-border {
-    border: 1px solid var(--neon);
-    box-shadow: 0 0 12px var(--neon-soft), inset 0 0 12px var(--neon-soft);
-    border-radius: 12px;
+    border: 1px solid var(--neon);
+    box-shadow: 0 0 12px var(--neon-soft), inset 0 0 12px var(--neon-soft);
+    border-radius: 12px;
 }
 
 /* ---- Navbar ---- */
 nav.navbar {
-    background: rgba(15, 20, 40, 0.6);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--neon);
-    box-shadow: 0 0 10px var(--neon-soft);
+    background: rgba(15, 20, 40, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--neon);
+    box-shadow: 0 0 10px var(--neon-soft);
 }
 
 nav .nav-link {
-    color: var(--neon);
+    color: var(--neon);
 }
 nav .nav-link:hover {
-    text-shadow: 0 0 8px var(--neon);
+    text-shadow: 0 0 8px var(--neon);
 }
 
 /* ---- Secciones oscuras ---- */
 .section-oscura {
-    background: #090d16;
-    color: #dfe9ff;
-    border-top: 1px solid var(--neon-soft);
+    background: #090d16;
+    color: #dfe9ff;
+    border-top: 1px solid var(--neon-soft);
 }
 
 /* ---- Secciones claras (tonos fríos) ---- */
 .section-clara {
-    background: #111726;
-    color: #e5eaff;
+    background: #111726;
+    color: #e5eaff;
 }
 
 /* ---- Títulos ---- */
 .seccion-titulo {
-    color: var(--neon);
-    text-shadow: 0 0 10px var(--neon);
-    font-weight: 900;
-    letter-spacing: 2px;
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon);
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 /* ---- Botones ---- */
 .btn-info {
-    background: transparent !important;
-    border: 1px solid var(--neon) !important;
-    color: var(--neon) !important;
-    box-shadow: 0 0 10px var(--neon-soft);
+    background: transparent !important;
+    border: 1px solid var(--neon) !important;
+    color: var(--neon) !important;
+    box-shadow: 0 0 10px var(--neon-soft);
 }
 .btn-info:hover {
-    background: var(--neon) !important;
-    color: #000 !important;
-    box-shadow: 0 0 20px var(--neon);
+    background: var(--neon) !important;
+    color: #000 !important;
+    box-shadow: 0 0 20px var(--neon);
 }
 
 /* ---- Foto de perfil ---- */
 .myclass-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 10px;
-    border: 160px solid var(--neon);
-    box-shadow: 0 0 15px var(--neon-soft);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 160px solid var(--neon);
+    box-shadow: 0 0 15px var(--neon-soft);
 }
 
 /* ---- Tarjetas ---- */
 .card, .experiencia-columna {
-    background: rgba(12, 18, 30, 0.6);
-    backdrop-filter: blur(10px);
-    color: var(--neon);
-    border: 1px solid var(--neon-soft);
-    box-shadow: 0 0 18px var(--neon-soft);
+    background: rgba(12, 18, 30, 0.6);
+    backdrop-filter: blur(10px);
+    color: var(--neon);
+    border: 1px solid var(--neon-soft);
+    box-shadow: 0 0 18px var(--neon-soft);
 }
 
 /* ---- Iconos ---- */
 i {
-    color: var(--neon);
-    text-shadow: 0 0 10px var(--neon);
-    font-size: 2rem;
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon);
+    font-size: 2rem;
 }
 
 /* ---- Proyectos ---- */
 .proyecto {
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 0 15px var(--neon-soft);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px var(--neon-soft);
 }
 
 .proyecto img {
-    transition: transform .4s;
+    transition: transform .4s;
 }
 .proyecto:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .proyecto .overlay {
-    background: rgba(0, 229, 255, 0.10);
-    backdrop-filter: blur(4px);
-    border-top: 1px solid var(--neon);
+    background: rgba(0, 229, 255, 0.10);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid var(--neon);
 }
 
 /* ---- Footer ---- */
 footer {
-    border-top: 1px solid var(--neon);
-    box-shadow: 0 -2px 20px var(--neon-soft);
+    border-top: 1px solid var(--neon);
+    box-shadow: 0 -2px 20px var(--neon-soft);
 }
 
 /* ---- Carrusel ---- */
 .carousel-dark .carousel-indicators button {
-    background-color: var(--neon);
+    background-color: var(--neon);
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-    filter: drop-shadow(0 0 5px var(--neon));
+    filter: drop-shadow(0 0 5px var(--neon));
 }
 
 /* ---- Caja de contacto ---- */
 .rectangulo {
-    border: 1px solid var(--neon);
-    box-shadow: 0 0 20px var(--neon-soft);
-    background: rgba(12, 18, 30, 0.6);
-    backdrop-filter: blur(8px);
+    border: 1px solid var(--neon);
+    box-shadow: 0 0 20px var(--neon-soft);
+    background: rgba(12, 18, 30, 0.6);
+    backdrop-filter: blur(8px);
 }
 .rectangulo button {
-    background: transparent;
-    border: 1px solid var(--neon);
-    color: var(--neon);
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
 }
 .rectangulo button:hover {
-    background: var(--neon);
-    color: #000;
+    background: var(--neon);
+    color: #000;
 }
-   
+    
 
-  </style>
+  </style>
 </head>
 <body>
-        <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-toggler">
-                <a class="navbar-brand" href="#">
-                    <img src="./images/favicon.png" width="50" alt="My logo">
-                </a>
-                <ul class="navbar-nav d-flex justify-content-center aling-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#aboutme" aria-current="page">Sobre mí <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#references">Referencias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contactme">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-        <section class="myclass d-flex flex-column align-items-center">
-        <div class="myclass-main d-flex flex-column justify-content-center align-items-center">
-            <img class="myclass-pic rounded-circle" src="./images/yo.png" alt="My selfie">
-            <h1>Hola, mi nombre es IAN</h1>
-            <h2>EL HURACAN</h2>
-        </div>
-        <div class="myclass-label">            
-         <video src="./images/monito.mp4" width="600" height="640" autoplay loop muted controls>
-    </video>
-        </div>
-    </section>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbar-toggler"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-toggler">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/favicon.png" width="50" alt="My logo">
+                </a>
+                <ul class="navbar-nav d-flex justify-content-center aling-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#aboutme" aria-current="page">Sobre mí <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#references">Referencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactme">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Me -->
+    <section class="myclass aling-items-stretch">
+        <div class="myclass-main d-flex flex-column justify-content-center aling-items-center">
+            <img class="myclass-pic rounded-circle" src="./images/yo.png" alt="My selfie">
+            <h1>Hola, mi nombre es IAN</h1>
+            <h2>EL HURACAN</h2>
+        </div>
+        <div class="myclass-label">            
+         <video src="./images/monito.mp4" width="600" height="640" autoplay loop muted controls>
+    </video>
+        </div>
+    </section>
 
-        <section id="aboutme" class="about-me section-oscura">
-        <div class="contenedor">
-            <h2 class="seccion-titulo">Conoce a Ian</h2>
-            <p class="seccion-texto">
-                Planeo terminar mi carrera de ingenieria en sistemas para tener acceso a oportunidades laborales muy amplias, ademas me gustaria seguir estudiando, despues de eso conseguir uno o mas posgrados para exprimir mis limites como estudiante y ser humano.
-            </p>
-        </div>
-    </section>
+    <!-- About me -->
+    <section id="aboutme" class="about-me section-oscura">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">Conoce a Ian</h2>
+            <p class="seccion-texto">
+                Planeo terminar mi carrera de ingenieria en sistemas para tener acceso a oportunidades laborales muy amplias, ademas me gustaria seguir estudiando, despues de eso conseguir uno o mas posgrados para exprimir mis limites como estudiante y ser humano.
+            </p>
+        </div>
+    </section>
 
-        <section class="experiencia section-clara">
-        <div class="container text-center">
-            <div class="row">
-                                <div class="experiencia-columna col-12 col-md-4">                    
-                    <p class="columna experiencia-title">Programming</p>                    
-                    <i class="bi-braces"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">PHP</span>
-                        <span class="badge bg-primary">C</span>
-                        <span class="badge bg-primary">Java</span>                        
-                    </div>
-                </div>
-                                <div class="experiencia-columna col-12 col-md-4">                    
-                    <p class="columna experiencia-title">Design</p>
-                    <i class="bi-window-desktop"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">UX</span>                        
-                        <span class="badge bg-primary">Usability</span>
-                        <span class="badge bg-primary">UI</span>                        
-                    </div>
-                </div>
-                                <div class="experiencia-columna col-12 col-md-4">
-                    <p class="columna experiencia-title">Management</p>
-                    <i class="bi-person-gear"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
-                    </p>
-                    <div class="badge-contenedor">                        
-                        <span class="badge bg-primary">Scrum</span>                        
-                        <span class="badge bg-primary">Trello</span>
-                        <span class="badge bg-primary">MVC</span>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Experience -->
+    <section class="experiencia section-clara">
+        <div class="container text-center">
+            <div class="row">
+                <!-- Programming -->
+                <div class="experiencia-columna col-12 col-md-4">                    
+                    <p class="columna experiencia-title">Programming</p>                    
+                    <i class="bi-braces"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
+                    </p>
+                    <div class="badge-contenedor">                        
+                        <span class="badge bg-primary">PHP</span>
+                        <span class="badge bg-primary">C</span>
+                        <span class="badge bg-primary">Java</span>                        
+                    </div>
+                </div>
+                <!-- Design -->
+                <div class="experiencia-columna col-12 col-md-4">                    
+                    <p class="columna experiencia-title">Design</p>
+                    <i class="bi-window-desktop"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
+                    </p>
+                    <div class="badge-contenedor">                        
+                        <span class="badge bg-primary">UX</span>                        
+                        <span class="badge bg-primary">Usability</span>
+                        <span class="badge bg-primary">UI</span>                        
+                    </div>
+                </div>
+                <!-- Management -->
+                <div class="experiencia-columna col-12 col-md-4">
+                    <p class="columna experiencia-title">Management</p>
+                    <i class="bi-person-gear"></i>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque enim maiores deserunt aliquam facere. 
+                    </p>
+                    <div class="badge-contenedor">                        
+                        <span class="badge bg-primary">Scrum</span>                        
+                        <span class="badge bg-primary">Trello</span>
+                        <span class="badge bg-primary">MVC</span>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects" class="proyectos section-clara d-flex flex-column">
-        <h2 class="seccion-titulo">Mis Proyectos</h2>
-        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
-                <div class="container text-center proyectos-contenedor">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro1.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro2.png" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro3.jpeg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro4.png" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro5.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="proyecto">
-                        <img src="./images/pro6.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <p>Mi primera chamba</p>
-                            <div class="icons-project">
-                                <a href="" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi-github"></i>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a href="" target="_blank" rel="noopener noreferrer"></a>
-            <button type="button" class="btn btn-info">Más chambas
-                <i class="bi-arrow-right-circle"></i>
-            </button>
-        </a>
-    </section>
+    <!-- Projects -->
+    <section id="projects" class="proyectos section-clara d-flex flex-column">
+        <h2 class="seccion-titulo">Mis Proyectos</h2>
+        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h3>
+        <!-- gallery -->
+        <div class="container text-center proyectos-contenedor">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro1.jpg" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro2.png" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro3.jpeg" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro4.png" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro5.jpg" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="proyecto">
+                        <img src="./images/pro6.jpg" alt="Project 1">
+                        <div class="overlay">
+                            <p>Mi primera chamba</p>
+                            <div class="icons-project">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="" target="_blank" rel="noopener noreferrer"></a>
+            <button type="button" class="btn btn-info">Más chambas
+                <i class="bi-arrow-right-circle"></i>
+            </button>
+        </a>
+    </section>
 
-        <section class="tips justify-content-start">
-        <h2 class="seccion-titulo">Tips</h2>
-        <div class="card">
-            <div class="card-header">
-                Sobre Programación
-            </div>
-            <ul class="list-group list-group-flush">
-                <a href="" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">La doble compilación</li>
-                </a>
-                <a href="" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">Cómo pasar programación sin programar</li>
-                </a>
-                <a href="https://www.youtube.com/watch?v=i_cVJgIz_Cs" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">No te olvides de poner el Where en el Delete From</li>
-                </a>
-                <a href="https://www.elladodelmal.com/2013/08/como-ser-hacker-o-como-aprender-hacking.html" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">Cómo ser hacker o Cómo aprender hacking</li>
-                </a>
-                <a href="https://www.tiktok.com/@racxogaming/video/7301543601022995718?q=jasware%20mec%C3%A1nico&t=1700262855116" target="_blank" rel="noopener noreferrer">
-                    <li class="list-group-item">El jaswer con descripción gráfica</li>
-                </a>
-            </ul>
-        </div>
-        <a href="" target="_blank" rel="noopener noreferrer">
-            <button type="button" class="btn btn-info">Más tips
-                <i class="bi-arrow-right-circle"></i>
-            </button>
-        </a>
-    </section>
+    <!-- Tips -->
+    <section class="tips justify-content-start">
+        <h2 class="seccion-titulo">Tips</h2>
+        <div class="card">
+            <div class="card-header">
+                Sobre Programación
+            </div>
+            <ul class="list-group list-group-flush">
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <li class="list-group-item">La doble compilación</li>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <li class="list-group-item">Cómo pasar programación sin programar</li>
+                </a>
+                <a href="https://www.youtube.com/watch?v=i_cVJgIz_Cs" target="_blank" rel="noopener noreferrer">
+                    <li class="list-group-item">No te olvides de poner el Where en el Delete From</li>
+                </a>
+                <a href="https://www.elladodelmal.com/2013/08/como-ser-hacker-o-como-aprender-hacking.html" target="_blank" rel="noopener noreferrer">
+                    <li class="list-group-item">Cómo ser hacker o Cómo aprender hacking</li>
+                </a>
+                <a href="https://www.tiktok.com/@racxogaming/video/7301543601022995718?q=jasware%20mec%C3%A1nico&t=1700262855116" target="_blank" rel="noopener noreferrer">
+                    <li class="list-group-item">El jaswer con descripción gráfica</li>
+                </a>
+            </ul>
+        </div>
+        <a href="" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="btn btn-info">Más tips
+                <i class="bi-arrow-right-circle"></i>
+            </button>
+        </a>
+    </section>
 
-        <section id="references" class="recomendaciones section-clara">
-        <h2 class="seccion-titulo">Recomendaciones</h2>
-        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        <div id="recomendaciones" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Gasparin</p>
-                        <p class="cargo">Fantasma amigable</p>
-                    </div>                    
-            </div> 
-            <div class="carousel-item">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Woody</p>
-                        <p class="cargo">Amigo fiel</p>
-                    </div>                    
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
-                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
-                    <div class="recomendacion-info">
-                        <p class="amigo">Rexona</p>
-                        <p class="cargo">Nunca te abandona</p>
-                    </div>                    
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#recomendaciones"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#recomendaciones"  data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
+    <!-- References -->
+    <section id="references" class="recomendaciones section-clara">
+        <h2 class="seccion-titulo">Recomendaciones</h2>
+        <h3 class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <div id="recomendaciones" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#recomendaciones" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
+                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
+                    <div class="recomendacion-info">
+                        <p class="amigo">Gasparin</p>
+                        <p class="cargo">Fantasma amigable</p>
+                    </div>                    
+                </div>
+            </div> 
+            <div class="carousel-item">
+                <div class="container">
+                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
+                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
+                    <div class="recomendacion-info">
+                        <p class="amigo">Woody</p>
+                        <p class="cargo">Amigo fiel</p>
+                    </div>                    
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <img src="./images/squirrel.png" class="recomendacion-imagen rounded-circle" alt="...">
+                    <p class="recomendacion-texto"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati harum itaque sunt. Voluptas, nobis! Inventore fugit eos corrupti odit eius dolorem.</p>
+                    <div class="recomendacion-info">
+                        <p class="amigo">Rexona</p>
+                        <p class="cargo">Nunca te abandona</p>
+                    </div>                    
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#recomendaciones"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#recomendaciones"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
 
-        <section id="contactme" class="contact section-oscura">
-        <div class="container">
-            <div class="container text-center rectangulo d-flex justify-content-evenly">
-                <div class="row">
-                    <div class="col-12 col-md-4 seccion-titulo">
-                        Talk to me
-                    </div>
-                    <div class="col-12 col-md-4 description">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="mailto:">
-                            <button type="button">
-                                Contacto
-                                <i class="bi-envelope-check"></i>
-                            </button>
-                        </a>                        
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Contact -->
+    <section id="contactme" class="contact section-oscura">
+        <div class="container">
+            <div class="container text-center rectangulo d-flex justify-content-evenly">
+                <div class="row">
+                    <div class="col-12 col-md-4 seccion-titulo">
+                        Talk to me
+                    </div>
+                    <div class="col-12 col-md-4 description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <a href="mailto:">
+                            <button type="button">
+                                Contacto
+                                <i class="bi-envelope-check"></i>
+                            </button>
+                        </a>                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <footer class="section-oscura d-flex flex-column aling-items-center justify-content-center">
-        <img class="footer-icon" src="./images/favicon.png" alt="Logo profile">
-        <p class="footer-text text-center">
-            Rem numquam minima sit consequatur  <br> fugit aliquid alias ratione adipisci.
-        </p>
-        <div class="icons-sn d-flex flex-wrap aling-items-center justify-content-center">
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-twitter"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-facebook"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-github"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-linkedin"></i>
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <i class="bi-instagram"></i>
-            </a>
-            <a href="mailto:" target="_blank" rel="noopener noreferrer">
-                <i class="bi-envelope"></i>
-            </a>
-        </div>
-        <div class="author"> Name (2024) &#169; </div>
-    </footer>
+    <!-- Footer -->
+    <footer class="section-oscura d-flex flex-column aling-items-center justify-content-center">
+        <img class="footer-icon" src="./images/favicon.png" alt="Logo profile">
+        <p class="footer-text text-center">
+            Rem numquam minima sit consequatur  <br> fugit aliquid alias ratione adipisci.
+        </p>
+        <div class="icons-sn d-flex flex-wrap aling-items-center justify-content-center">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="bi-twitter"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="bi-facebook"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="bi-github"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="bi-linkedin"></i>
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <i class="bi-instagram"></i>
+            </a>
+            <a href="mailto:" target="_blank" rel="noopener noreferrer">
+                <i class="bi-envelope"></i>
+            </a>
+        </div>
+        <div class="author"> Name (2024) &#169; </div>
+    </footer>
 
-        <script src="./js/bootstrap.min.js"></script>    
-                <script src="./js/main.js"></script>    
+    <!-- Bootstrap JS offline -->
+    <script src="./js/bootstrap.min.js"></script>    
+    <!-- Bootstrap JS online -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script> -->
+    <!-- My JS -->
+    <script src="./js/main.js"></script>    
 </body>
 </html>
+
